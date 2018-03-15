@@ -1,4 +1,19 @@
 canvas {
-    border: 1px solid #d3d3d3;
+    border: 1px solid #98f5ff;
     background-image: url(baggrund.jpg);
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+html {
+  background-color: gray; 
+}
+
+h1 {
+    text-align: center;
+    text-shadow:5px 5px 10px blue;
+    font-family: fantasy;
+    color:aliceblue;
 }
