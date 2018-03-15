@@ -36,6 +36,7 @@ var myGameArea = {
 //Laver mit canvas/gamearea, updatere myGameArea, og registrer hvis jeg klikker på mit tastatur
 
 
+
 function component(width, height, color, x, y, type) {
     this.type = type;
     this.score = 0;
@@ -48,7 +49,12 @@ function component(width, height, color, x, y, type) {
     this.speedX = 0;
     this.speedY = 0;    
     this.x = x;
-    this.y = y;    
+    this.y = y; 
+    this.gravity = 0.00001; //forhøjer min gravity med tiden, per frame update
+    this.gravitySpeed = 1;  //er min start speed
+    
+    
+    
     this.update = function() {
         ctx = myGameArea.context;
          if (this.type == "text") {
@@ -70,8 +76,10 @@ function component(width, height, color, x, y, type) {
             }
     }
     this.newPos = function() {
+        this.gravitySpeed += this.gravity;
         this.x += this.speedX;
-        this.y += this.speedY;        
+        this.y += this.speedY + this.gravitySpeed;
+        
     }    
     this.crashWith = function(otherobj) {
         var myleft = this.x;
@@ -125,7 +133,7 @@ function updateGameArea() {
     spiller.newPos();    
     spiller.update();
 }
-// laver min function updateGameArea, som tjekker spiller har ramt noget, og stopper spillet hvis den har, jeg tilføjer også pil op og ned, som nu kan rykke min spiller
+// laver min function updateGameArea, som tjekker om spiller har ramt noget, og stopper spillet hvis den har, jeg tilføjer også pil op og ned, som nu kan rykke min spiller
 
 
 function everyinterval(n) {
