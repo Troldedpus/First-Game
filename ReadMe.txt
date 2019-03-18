@@ -11,4 +11,4 @@ Updates to come
  - impact sounds
  - fixing issue with the player falls out of the game area if not moving in the start
  - Translate to English
- - Pause option, either on key press or button press
+ - Pause option
