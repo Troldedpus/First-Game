@@ -6,9 +6,4 @@ with an increase on every frame upate, so in time you will no longer be able to 
 
 
 
-Updates to come
- - more "bling"
- - impact sounds
- - fixing issue with the player falls out of the game area if not moving in the start
- - Translate to English
- - Pause option
+Since this is my first code ever made, there are few bugs in it, sadly the comments are on Danish, which I hope to fix "soon" mainly uploaded this for myself to see how I've improved over time
